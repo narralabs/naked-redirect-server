@@ -9,11 +9,13 @@ server {
   server_name _;
 
   location /up {
-    add_header Content-Type text/html;
+    access_log /dev/stdout default_redirect;
+    default_type text/html;
     return 200 "<html><body><h1>Success</h1><p>Server is up and running!</p></body></html>";
   }
 
   location / {
-      return 301 https://www.$host$request_uri;
+    access_log /dev/stdout default_redirect;
+    return 301 https://www.$host$request_uri;
   }
 }

@@ -10,7 +10,7 @@ FROM base as builder
 
 # Copy custom nginx configuration
 COPY sites-available/default /etc/nginx/sites-available/default
-COPY sites-available/setoutpost.com /etc/nginx/sites-available/setoutpost.com
+COPY conf.d/logging.conf /etc/nginx/conf.d/logging.conf
 
 # Expose port 80 and 443
 EXPOSE 80
