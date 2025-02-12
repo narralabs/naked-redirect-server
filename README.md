@@ -5,6 +5,14 @@ used for kamal applications but can be used for any other deployment.
 
 ## Getting Started
 
-1. Setup a server or instance of your choice.
-2. Deploy using kamal.
+1. Fork the repository.
+2. Clone the repository locally: `git clone https://github.com/your-username/naked-redirect-server.git`
 3. Configure the A record of your domain to point to the instance's public IP.
+3. Configure the A record of your domain to point to the instance's public IP.
+
+## Hetzner Setup
+
+1. Create a server in Hetzner.
+2. Add the server to the `web` group in `config/deploy.yml`.
+3. Run `kamal setup` to setup the server.
+4. Run `kamal deploy` to deploy the application.
