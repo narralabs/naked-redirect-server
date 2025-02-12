@@ -1,14 +1,11 @@
 server {
     listen 80;
+    listen 443 ssl;
+
     server_name setoutpost.com;
 
-    # Allow requests to .well-known without redirecting
-    location /.well-known/ {
-        root /var/www/setoutpost.com/.well-known;
-    }
-
-    # Redirect all other traffic to www.setoutpost.com
+    # Redirect non-www to www
     location / {
-        return 301 $scheme://www.setoutpost.com$request_uri;
+        return 301 https://www.$host$request_uri;
     }
 }
