@@ -21,4 +21,4 @@ RUN mkdir -p /var/www/certbot
 RUN mkdir -p /etc/letsencrypt/live/setoutpost.com
 
 # Start Nginx
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# ENTRYPOINT ["nginx", "-g", "daemon off;"]
