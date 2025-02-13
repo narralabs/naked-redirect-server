@@ -28,7 +28,7 @@ https://yourdomain.com -> https://www.yourdomain.com <-- this redirect is done b
 2. Create docker hub repository. Name is `naked-redirect-server`.
 3. Clone this repository: `git clone https://github.com/narralabs/naked-redirect-server.git`
 4. Rename the `config/deploy.yml.example` file to `config/deploy.yml`
-5. In `config/deploy.yml`, replace image with the docker hub repository name from `2.`
+5. In `config/deploy.yml`, replace `image` with the docker hub repository name from `2.`
 6. In `config/deploy.yml`, add the IP of the server you made in step `1.` to the servers `web` group.
 7. In `config/deploy.yml`, add the domains you want to redirect to the proxy `hosts` array.
 8. In `config/deploy.yml`, add your docker hub username to the registry `username` field.
