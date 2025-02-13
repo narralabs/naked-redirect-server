@@ -35,7 +35,7 @@ https://yourdomain.com -> https://www.yourdomain.com <-- this redirect is done b
 9. Run `KAMAL_REGISTRY_PASSWORD=<your-docker-hub-password> kamal setup` to setup the server.
 10. Add the IP of the server you made in step `1.` to the A record of your DNS provider (e.g. Hetzner DNS, GoDaddy, AWS Route 53, Cloudflare).
 11. You should now be able to access your naked domain and it should redirect to the www subdomain.
-12. You can test this using curl: `curl -I http://yourdomain.com`
+12. You can test this using curl: `curl -I https://yourdomain.com`
 ```
 HTTP/1.1 301 Moved Permanently
 Server: nginx
