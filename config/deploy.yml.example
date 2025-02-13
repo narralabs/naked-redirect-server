@@ -1,0 +1,15 @@
+service: naked-redirect-server
+image: <YOUR_DOCKER_HUB_USERNAME>/naked-redirect-server
+servers:
+  web:
+    - <YOUR_IP_ADDRESS_HERE>
+proxy:
+  ssl: true
+  hosts:
+    - <YOUR_DOMAIN_HERE>
+registry:
+  username: <YOUR_DOCKER_HUB_USERNAME_HERE>
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+builder:
+  arch: amd64
