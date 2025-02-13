@@ -12,11 +12,8 @@ yourseconddomain.com -> www.yourseconddomain.com
 The redirect behaviour is as follows:
 
 ```
-http://yourfirstdomain.com -> https://www.yourfirstdomain.com
-https://yourfirstdomain.com -> https://www.yourfirstdomain.com
-
-http://yourseconddomain.com -> https://www.yourseconddomain.com
-https://yourseconddomain.com -> https://www.yourseconddomain.com
+http://yourfirstdomain.com -> https://yourfirstdomain.com      <-- this redirect is done by kamal-proxy due to SSL true in config
+https://yourfirstdomain.com -> https://www.yourfirstdomain.com <-- this redirect is done by our nginx server
 ```
 
 ## Requirements
