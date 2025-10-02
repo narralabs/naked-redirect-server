@@ -9,7 +9,6 @@ RUN apk add --no-cache \
 FROM base AS builder
 
 # Copy custom nginx configuration
-COPY conf.d/logging.conf /etc/nginx/conf.d/00-logging.conf
 COPY sites-available/default /etc/nginx/conf.d/default.conf
 
 # Expose port 80 and 443
