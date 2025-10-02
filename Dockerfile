@@ -1,12 +1,12 @@
-FROM ubuntu/nginx:1.18-22.04_beta AS base
+FROM nginx:1.27-alpine AS base
 
 # Install Certbot and Nginx plugin
-RUN apt-get update && apt-get install -y \
+RUN apk add --no-cache \
     certbot \
-    python3-certbot-nginx \
-    && rm -rf /var/lib/apt/lists/*
+    certbot-nginx \
+    py3-pip
 
-FROM base as builder
+FROM base AS builder
 
 # Copy custom nginx configuration
 COPY sites-available/default /etc/nginx/sites-available/default
